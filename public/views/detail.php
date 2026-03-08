@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails - LOKE</title>
     <link rel="stylesheet" href="../css/shop.css"> <style>
-        /* Styles spécifiques à la page détail pour coller à ton image */
         .detail-container {
             display: grid;
             grid-template-columns: 1fr 1fr;

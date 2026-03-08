@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>PHP Shop</title>
     <style>
-        /* Colle tout ton CSS ici pour qu'il s'applique à toutes les pages */
         body { font-family: sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px; }
         header { display: flex; justify-content: space-between; align-items: center; background: #333; color: white; padding: 10px 20px; border-radius: 8px; }
         nav a { color: white; margin-left: 15px; text-decoration: none; }

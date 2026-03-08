@@ -1,0 +1,44 @@
+/* --- COULEURS LOKE --- */
+:root {
+    --loke-blue: #2563eb;
+    --loke-light-blue: #eef2ff;
+    --text-dark: #1f2937;
+    --border: #e5e7eb;
+}
+
+/* --- LAYOUT DU SCREEN --- */
+.main-header { padding: 20px 0; border-bottom: 1px solid var(--border); }
+.flex-header { display: flex; justify-content: center; position: relative; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--loke-blue); text-decoration: none; }
+.nav-links { position: absolute; right: 0; display: flex; gap: 20px; }
+
+.hero-account { text-align: center; padding: 40px 0; }
+.hero-account h1 { font-size: 2.5rem; font-weight: 700; }
+
+/* --- BANNIÈRE IA (Bleu clair comme sur ton image) --- */
+.info-banner {
+    background-color: var(--loke-light-blue);
+    color: #1e3a8a;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    border: 1px solid #dbeafe;
+}
+
+/* --- BOUTON BLEU LOKE --- */
+.btn-loke {
+    display: block;
+    width: 100%;
+    background-color: var(--loke-blue);
+    color: white;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-loke:hover { background-color: #1d4ed8; }

@@ -1,3 +1,15 @@
+<?php
+// 1. Connexion à la base de données
+require_once('../config/db.php');
+
+// 2. Récupération des animaux depuis la DB
+try {
+    $query = $pdo->query("SELECT * FROM animals");
+    $animals = $query->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    $error = "Erreur lors de la récupération des données.";
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -33,45 +45,24 @@
         </div>
 
         <div class="grid" id="product-grid">
-            <article class="card" data-category="chien">
-                <div class="img-placeholder"></div>
-                <div class="card-body">
-                    <span class="category-tag">Chien</span>
-                    <h3>Golden Retriever</h3>
-                    <p class="price">850 €</p>
-                    <a href="#" class="btn">Ajouter au panier</a>
-                </div>
-            </article>
+            
+            <?php if (!empty($animals)): ?>
+                <?php foreach ($animals as $animal): ?>
+                    <article class="card" data-category="<?= htmlspecialchars(strtolower($animal['type'])) ?>">
+                        <div class="img-placeholder">
+                            </div>
+                        <div class="card-body">
+                            <span class="category-tag"><?= htmlspecialchars($animal['type']) ?></span>
+                            <h3><?= htmlspecialchars($animal['nom']) ?></h3>
+                            <p class="price"><?= number_format($animal['prix'], 2, ',', ' ') ?> €</p>
+                            <a href="cart.php?add=<?= $animal['id'] ?>" class="btn">Ajouter au panier</a>
+                        </div>
+                    </article>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Aucun animal n'est disponible pour le moment.</p>
+            <?php endif; ?>
 
-            <article class="card" data-category="chat">
-                <div class="img-placeholder"></div>
-                <div class="card-body">
-                    <span class="category-tag">Chat</span>
-                    <h3>Main Coon</h3>
-                    <p class="price">1 200 €</p>
-                    <a href="#" class="btn">Ajouter au panier</a>
-                </div>
-            </article>
-
-            <article class="card" data-category="chien">
-                <div class="img-placeholder"></div>
-                <div class="card-body">
-                    <span class="category-tag">Chien</span>
-                    <h3>Berger Australien</h3>
-                    <p class="price">950 €</p>
-                    <a href="#" class="btn">Ajouter au panier</a>
-                </div>
-            </article>
-
-            <article class="card" data-category="chat">
-                <div class="img-placeholder"></div>
-                <div class="card-body">
-                    <span class="category-tag">Chat</span>
-                    <h3>Siamois</h3>
-                    <p class="price">700 €</p>
-                    <a href="#" class="btn">Ajouter au panier</a>
-                </div>
-            </article>
         </div>
     </main>
 

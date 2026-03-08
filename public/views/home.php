@@ -33,7 +33,6 @@
 
     <main class="container">
         <section class="info-tag">
-            <p><strong>Info IA :</strong> Nos algorithmes analysent le marché à Aix-en-Provence pour vous proposer les meilleurs prix.</p>
         </section>
 
         <div class="grid">
@@ -42,7 +41,7 @@
                 <div class="card-body">
                     <h3>Golden Retriever</h3>
                     <p>850 €</p>
-                    <a href="#" class="btn">Voir plus</a>
+                    <a href="detail.php?id=1" class="btn">Voir plus</a>
                 </div>
             </article>
 
@@ -67,7 +66,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 LOKE - 12 Agences connectées par VPN</p>
+        <p>&copy;2026 LOKE</p>
     </footer>
 
 </body>

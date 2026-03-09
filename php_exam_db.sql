@@ -41,7 +41,7 @@ CREATE TABLE Stock (
     FOREIGN KEY (id_article) REFERENCES Article(id)
 );
 
--- Table Invoice (Factures)
+-- Table Invoice
 CREATE TABLE Invoice (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_user INT,

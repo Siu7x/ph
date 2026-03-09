@@ -1,4 +1,4 @@
-<?php require_once "header.php"; require_once "../../models/db.php";
+<?php require_once "header.php"; require_once "../../config/db.php";
 $u_id = $_SESSION['user_id'];
 
 // Calcul du total

@@ -1,8 +1,7 @@
 <?php
 // 1. Connexion à la base de données
-require_once('../config/db.php');
+require_once('../../config/db.php');
 
-// 2. Récupération des animaux depuis la DB
 try {
     $query = $pdo->query("SELECT * FROM animals");
     $animals = $query->fetchAll(PDO::FETCH_ASSOC);
